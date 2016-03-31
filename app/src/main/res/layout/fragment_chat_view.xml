@@ -1,0 +1,67 @@
+<RelativeLayout android:id="@+id/layout_question_detail"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:clipToPadding="false">
+
+	<RelativeLayout
+		android:id="@+id/footer"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:background="@android:color/background_light">
+
+		<Button
+			android:id="@+id/btn_camera"
+			android:layout_width="35dp"
+			android:layout_height="35dp"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="6dp"
+			android:layout_marginRight="6dp"
+			android:background="@drawable/ic_camera"/>
+
+		<TextView
+			android:id="@+id/btn_send"
+			android:layout_width="35dp"
+			android:layout_height="35dp"
+			android:layout_alignParentRight="true"
+			android:layout_centerVertical="true"
+			android:layout_marginLeft="6dp"
+			android:layout_marginRight="6dp"
+			android:background="@drawable/ic_send"
+			android:gravity="center"
+			android:textSize="14sp"/>
+
+		<EditText
+			android:id="@+id/et_input"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_centerVertical="true"
+			android:layout_marginBottom="3dp"
+			android:layout_marginTop="12dp"
+			android:layout_toLeftOf="@+id/btn_send"
+			android:layout_toRightOf="@+id/btn_camera"
+			android:background="@drawable/border_input_text"
+			android:bufferType="editable"
+			android:cursorVisible="true"
+			android:textSize="12dp"/>
+
+	</RelativeLayout>
+
+	<android.support.v7.widget.RecyclerView
+		android:id="@+id/recyclerView"
+		android:layout_above="@id/footer"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:cacheColorHint="@android:color/transparent"
+		android:clickable="true"
+		android:clipChildren="false"
+		android:clipToPadding="false"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		android:padding="5dp">
+	</android.support.v7.widget.RecyclerView>
+
+
+</RelativeLayout>
